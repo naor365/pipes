@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
+import {Trim} from '../pipes/trim.pipe';
 
 @Component({
   selector: 'examples',
-  pipes: [],
+  pipes: [Trim],
   template:`
-   <h1>Pipes Examples</h1>
+   <h1>{{ header| trim }}</h1>
    ` ,
 })
 
-export class Examples {}
+export class Examples {
+  header:string = "naor shlomo the king";
+}
